@@ -10,13 +10,13 @@ import { addHistory } from "@/lib/history";
 export const Route = createFileRoute("/meetings")({
   head: () => ({
     meta: [
-      { title: "Meeting Notes Summarizer | Vellum AI Workspace" },
+      { title: "Meeting Notes Summarizer | AiFlow AI Workspace" },
       {
         name: "description",
         content:
           "Turn long meeting transcripts into an executive summary with decisions, action items, owners and deadlines.",
       },
-      { property: "og:title", content: "Meeting Notes Summarizer | Vellum AI Workspace" },
+      { property: "og:title", content: "Meeting Notes Summarizer | AiFlow AI Workspace" },
       {
         property: "og:description",
         content:

@@ -10,13 +10,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/history")({
   head: () => ({
     meta: [
-      { title: "History | Vellum AI Workspace" },
+      { title: "History | AiFlow AI Workspace" },
       {
         name: "description",
         content:
           "Revisit and copy the emails, meeting summaries and research briefings you generated on this device.",
       },
-      { property: "og:title", content: "History | Vellum AI Workspace" },
+      { property: "og:title", content: "History | AiFlow AI Workspace" },
       {
         property: "og:description",
         content: "Revisit and copy your recent AI-generated work, saved in this browser.",
@@ -40,8 +40,8 @@ function HistoryPage() {
   useEffect(() => {
     const sync = () => setEntries(readHistory());
     sync();
-    window.addEventListener("vellum:history", sync);
-    return () => window.removeEventListener("vellum:history", sync);
+    window.addEventListener("aiflow:history", sync);
+    return () => window.removeEventListener("aiflow:history", sync);
   }, []);
 
   useEffect(() => {

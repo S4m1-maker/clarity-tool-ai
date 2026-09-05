@@ -10,7 +10,7 @@ export type HistoryEntry = {
   createdAt: number;
 };
 
-const KEY = "vellum.history.v1";
+const KEY = "aiflow.history.v1";
 const LIMIT = 60;
 
 function isBrowser() {
@@ -33,7 +33,7 @@ function write(entries: HistoryEntry[]) {
   if (!isBrowser()) return;
   try {
     window.localStorage.setItem(KEY, JSON.stringify(entries.slice(0, LIMIT)));
-    window.dispatchEvent(new Event("vellum:history"));
+    window.dispatchEvent(new Event("aiflow:history"));
   } catch {
     /* storage full or unavailable — history is best effort */
   }

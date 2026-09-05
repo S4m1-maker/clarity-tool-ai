@@ -53,8 +53,8 @@ function SidebarBody({ onNavigate }: { onNavigate?: (() => void) | undefined }) 
   useEffect(() => {
     const sync = () => setSaved(readHistory().length);
     sync();
-    window.addEventListener("vellum:history", sync);
-    return () => window.removeEventListener("vellum:history", sync);
+    window.addEventListener("aiflow:history", sync);
+    return () => window.removeEventListener("aiflow:history", sync);
   }, []);
 
   return (
@@ -64,7 +64,7 @@ function SidebarBody({ onNavigate }: { onNavigate?: (() => void) | undefined }) 
           <span className="font-display text-sm font-bold text-brand-foreground">V</span>
         </div>
         <div>
-          <p className="font-display leading-none font-semibold text-card-foreground">Vellum</p>
+          <p className="font-display leading-none font-semibold text-card-foreground">AiFlow</p>
           <p className="mt-1 text-[10px] tracking-widest text-faint uppercase">AI Workspace</p>
         </div>
       </div>
@@ -168,7 +168,7 @@ export function AppShell({
             </span>
             <p className="text-[11px] text-faint">
               AI-generated content should be reviewed by a human before sending or publishing.
-              Vellum does not verify factual accuracy.
+              AiFlow does not verify factual accuracy.
             </p>
             <Link
               to="/settings"

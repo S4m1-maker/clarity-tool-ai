@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Vellum design system — "liquid obsidian".
+ * AiFlow design system — "liquid obsidian".
  * Dark-first workspace surface, violet brand, teal signal accent.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
