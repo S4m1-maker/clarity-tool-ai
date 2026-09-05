@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Smart Email Generator | Vellum AI Workspace" },
+      { title: "Smart Email Generator | AiFlow AI Workspace" },
       {
         name: "description",
         content:
           "Turn a short brief into a ready-to-send professional email, tuned to tone and audience, with one-click copy.",
       },
-      { property: "og:title", content: "Smart Email Generator | Vellum AI Workspace" },
+      { property: "og:title", content: "Smart Email Generator | AiFlow AI Workspace" },
       {
         property: "og:description",
         content:

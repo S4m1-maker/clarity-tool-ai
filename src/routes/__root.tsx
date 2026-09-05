@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vellum AI Workspace" },
+      { title: "AiFlow AI Workspace" },
       {
         name: "description",
         content:
-          "Vellum automates workplace writing: professional emails, meeting summaries and research briefings.",
+          "AiFlow automates workplace writing: professional emails, meeting summaries and research briefings.",
       },
-      { property: "og:title", content: "Vellum AI Workspace" },
+      { property: "og:title", content: "AiFlow AI Workspace" },
       {
         property: "og:description",
         content:

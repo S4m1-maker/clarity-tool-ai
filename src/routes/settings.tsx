@@ -7,23 +7,23 @@ import { clearHistory, readHistory } from "@/lib/history";
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings | Vellum AI Workspace" },
+      { title: "Settings | AiFlow AI Workspace" },
       {
         name: "description",
         content:
-          "Manage your default signature, saved results in this browser, and read how Vellum handles AI output responsibly.",
+          "Manage your default signature, saved results in this browser, and read how AiFlow handles AI output responsibly.",
       },
-      { property: "og:title", content: "Settings | Vellum AI Workspace" },
+      { property: "og:title", content: "Settings | AiFlow AI Workspace" },
       {
         property: "og:description",
-        content: "Defaults, local storage controls and responsible-AI guidance for Vellum.",
+        content: "Defaults, local storage controls and responsible-AI guidance for AiFlow.",
       },
     ],
   }),
   component: SettingsPage,
 });
 
-const SIGNATURE_KEY = "vellum.signature.v1";
+const SIGNATURE_KEY = "aiflow.signature.v1";
 
 function SettingsPage() {
   const [signature, setSignature] = useState("");
@@ -34,8 +34,8 @@ function SettingsPage() {
     setSignature(window.localStorage.getItem(SIGNATURE_KEY) ?? "");
     setSaved(readHistory().length);
     const sync = () => setSaved(readHistory().length);
-    window.addEventListener("vellum:history", sync);
-    return () => window.removeEventListener("vellum:history", sync);
+    window.addEventListener("aiflow:history", sync);
+    return () => window.removeEventListener("aiflow:history", sync);
   }, []);
 
   return (

@@ -10,13 +10,13 @@ import { addHistory } from "@/lib/history";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "AI Research Assistant | Vellum AI Workspace" },
+      { title: "AI Research Assistant | AiFlow AI Workspace" },
       {
         name: "description",
         content:
           "Summarize articles, reports and complex topics into key takeaways, plain-English explanations and strategic recommendations.",
       },
-      { property: "og:title", content: "AI Research Assistant | Vellum AI Workspace" },
+      { property: "og:title", content: "AI Research Assistant | AiFlow AI Workspace" },
       {
         property: "og:description",
         content:
