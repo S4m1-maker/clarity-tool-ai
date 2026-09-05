@@ -27,7 +27,7 @@ function NavItem({
   glyph: string;
   label: string;
   active: boolean;
-  onNavigate?: () => void;
+  onNavigate?: (() => void) | undefined;
 }) {
   return (
     <Link
@@ -46,7 +46,7 @@ function NavItem({
   );
 }
 
-function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
+function SidebarBody({ onNavigate }: { onNavigate?: (() => void) | undefined }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const [saved, setSaved] = useState(0);
 
